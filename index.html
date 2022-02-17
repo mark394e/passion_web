@@ -8,13 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <section id="popup">
+      <article>
+        <img src="" alt="" class="billede" />
+        <h2 class="navn"></h2>
+        <p class="langtekst"></p>
+        <p class="udvalgt"></p>
+        <p class="influencer"></p>
+        <button id="luk">Luk</button>
+      </article>
+    </section>
     <div class="splash"><h1>Alle</h1></div>
 
     <nav class="nav">
-      <button data-kategori="alle" class="valgt">Alle</button>
-      <button data-kategori="forretter">Forret</button>
-      <button data-kategori="hovedretter">Hovedret</button>
-      <button data-kategori="desserter">Dessert</button>
+      <button data-influencer="alle" class="valgt">Alle</button>
+      <button data-influencer="Markus">Markus</button>
+      <button data-influencer="Sandra">Sandra</button>
+      <button data-influencer="Filippa">Filippa</button>
+      <button data-influencer="Dino">Dino</button>
     </nav>
 
     <main>
@@ -22,8 +33,8 @@
         <article>
           <img src="" alt="" class="billede" />
           <h2 class="navn"></h2>
-          <p class="tekst"></p>
-          <p class="pris"></p>
+          <p class="genre"></p>
+          <p class="korttekst"></p>
         </article>
       </template>
     </main>

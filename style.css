@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffbf1;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1rem;
+  background-color: #fffbf1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0px 0px 0px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-row: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+article {
+  border: 2px solid darkred;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+article:hover {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.splash {
+  width: 100%;
+  height: 40vh;
+  background-image: url(http://placeimg.com/640/480/any); /* Midlertidigt baggrundsbillede */
+  background-size: cover;
+  background-position: 19% 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.splash h1 {
+  display: grid;
+  color: darkred;
+  place-content: center;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-size: 6rem;
+}
+
+.valgt {
+  background-color: darkred;
+  color: white;
+}
+
+button:hover {
+  background-color: darkred;
+  color: white;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+}
+button {
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  padding: 10px 24px;
+  border: solid 1.5px darkred;
+  font-size: 1rem;
+  background-color: #fffbf1;
+  color: darkred;
+  font-weight: 500;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+}
+
+#popup article {
+  width: 50vw;
+  display: flex;
+  margin: 4rem auto;
+  border-radius: 25px;
+  padding: 12px;
+  background-color: #fffbf1;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup article h2,
+p {
+  margin: 10px 0px 10px 0px;
+}
+
+#popup article img {
+  border-radius: 8px;
+}
+
+#luk {
+  /* font-size: 1.7em; */
+  font-weight: 500;
+  color: darkred;
+  cursor: pointer;
+}
+
+#luk:hover {
+  background-color: darkred;
+  color: white;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 600px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-flow: column;
+    margin: 10px 50px 10px 50px;
+  }
+  main {
+    margin: 10px 50px 10px 50px;
+  }
+}
