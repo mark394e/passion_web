@@ -59,7 +59,7 @@ function start() {
     artister.forEach((artist) => {
       if (filter == artist.influencer || filter == "alle") {
         const klon = template.cloneNode(true);
-        klon.querySelector(".billede").src = "http://placeimg.com/640/480/any"; // midlertidigt billede
+        klon.querySelector(".billede").src = "img/" + artist.billede + ".png";
         klon.querySelector(".navn").textContent = artist.navn;
         klon.querySelector(".korttekst").textContent = artist.kort_beskrivelse;
         klon.querySelector(".genre").textContent = "Genre: " + artist.genre;
@@ -80,7 +80,8 @@ function start() {
     document.querySelector(".nav").style.position = "inherit";
     article.style.cursor = "default";
     popup.style.display = "block";
-    popup.querySelector(".billede").src = "http://placeimg.com/640/480/any"; // midlertidigt billede
+    popup.querySelector(".billede").src = "img/" + artist.billede + ".png";
+    popup.querySelector(".billede").style.maxWidth = "50%";
     popup.querySelector("iframe").src = artist.lyd;
     popup.querySelector(".navn").textContent = artist.navn;
     popup.querySelector(".langtekst").textContent = artist.lang_beskrivelse;
