@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+iframe {
+  margin-top: 10px;
+}
+
 body {
   background-color: #fffbf1;
 }

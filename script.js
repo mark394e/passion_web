@@ -81,6 +81,7 @@ function start() {
     article.style.cursor = "default";
     popup.style.display = "block";
     popup.querySelector(".billede").src = "http://placeimg.com/640/480/any"; // midlertidigt billede
+    popup.querySelector("iframe").src = artist.lyd;
     popup.querySelector(".navn").textContent = artist.navn;
     popup.querySelector(".langtekst").textContent = artist.lang_beskrivelse;
     popup.querySelector(".udvalgt").textContent = "Lyt til: " + artist.udvalgt;
