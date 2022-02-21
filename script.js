@@ -5,6 +5,7 @@ function start() {
 
   // Definerer stien til json-array fra restdb i stedet for lokal .json-fil
   const url = "https://passion-410f.restdb.io/rest/musikere";
+  const url2 = "https://passion-410f.restdb.io/rest/omos";
   const key = "620e21bb34fd621565858704";
   const options = {
     headers: {
@@ -13,13 +14,16 @@ function start() {
   };
   // definere globale variable
   const main = document.querySelector("main");
-  const template = document.querySelector("template").content;
+  const section = document.querySelector(".infoBoks");
+  const template = document.querySelector(".loopview").content;
+  const template2 = document.querySelector(".bloggerBoks").content;
   const popup = document.querySelector("#popup");
   const article = document.querySelector("article");
   const lukKnap = document.querySelector("#luk");
   const header = document.querySelector("h1");
 
-  let retter;
+  let bloggere;
+  let artister;
   let filter = "alle";
 
   // sætter eventlistener på alle knapper i nav'en og lytter efter klik på knapperne
@@ -36,6 +40,7 @@ function start() {
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
     visArtister();
+    visBloggere();
 
     // jeg sætter h1'erens tekstindhold ligmed tekstindholdet af den knap der er trykket på
     header.textContent = this.textContent;
@@ -44,9 +49,35 @@ function start() {
   // Henter json-data fra restdb via fetch()
   async function hentData() {
     const respons = await fetch(url, options);
+    const respons2 = await fetch(url2, options);
     artister = await respons.json();
+    bloggere = await respons2.json();
     console.log("Artister", artister);
+    console.log("Bloggere", bloggere);
     visArtister();
+    visBloggere();
+  }
+
+  function visBloggere() {
+    console.log("visBloggere");
+
+    section.textContent = ""; // Her resetter jeg DOM'en ved at tilføje en tom string
+
+    // for hver ret i arrayet, skal der tjekkes om de opfylder filter-kravet (forretter, hovedretter eller desserter) og derefter vises i DOM'en.
+    bloggere.forEach((blogger) => {
+      if (filter == blogger.influencer) {
+        const klon2 = template2.cloneNode(true);
+        klon2.querySelector(".bloggerBillede").src =
+          "img/" + blogger.billede2 + ".jpg";
+        klon2.querySelector(".bloggerNavn").textContent = blogger.navn;
+        klon2.querySelector(".bloggerTekst").textContent = blogger.omos;
+
+        // tilføjer klon-template-elementet til main-elementet (så det hele vises i DOM'en)
+        section.appendChild(klon2);
+        // tilføjer section-elementet til body før main-elementet
+        document.body.insertBefore(section, main);
+      }
+    });
   }
 
   // loop'er gennem alle retter i json-arrayet
