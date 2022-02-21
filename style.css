@@ -57,7 +57,7 @@ article:hover {
 .splash {
   width: 100%;
   height: 40vh;
-  background-image: url(http://placeimg.com/640/480/any); /* Midlertidigt baggrundsbillede */
+  background-image: url(img/splash_dark.png); /* Midlertidigt baggrundsbillede */
   background-size: cover;
   background-position: 19% 40%;
   display: grid;
