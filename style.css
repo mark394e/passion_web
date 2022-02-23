@@ -4,8 +4,19 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3 {
+  font-family: Russo One;
+}
+
+p {
+  font-family: "Helvetica Neue";
+}
+
 iframe {
-  margin-top: 10px;
+  grid-column: 1/2;
+  grid-row: 3/4;
 }
 
 body {
@@ -91,9 +102,9 @@ main div {
   width: 280px;
 }
 
-article:hover {
+/* article:hover {
   box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
-}
+} */
 
 .splash {
   width: 100%;
@@ -162,36 +173,67 @@ button {
 }
 
 #popup article {
-  width: 50vw;
-  display: flex;
+  width: 70vw;
+  height: 500px;
   margin: 4rem auto;
   border-radius: 25px;
   padding: 12px;
-  background-color: #f2f2f2;
-  flex-direction: column;
-  align-items: center;
+  background-color: #07678d;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 100px;
+  gap: 20px;
 }
 
-#popup article h2,
-p {
-  margin: 10px 0px 10px 0px;
+#popup article h2 {
+  margin: 10px 0px 70px 0px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  place-self: start;
+  color: #f2f2f2;
+}
+
+.langtekst {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  place-self: center;
+  color: #f2f2f2;
+}
+
+.udvalgt {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  place-self: center start;
+  color: #f2f2f2;
+}
+
+.influencer {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  place-self: end start;
+  color: #f2f2f2;
 }
 
 #popup article img {
   border-radius: 8px;
+  place-self: center;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  max-height: 100%;
+  max-width: 50%;
 }
 
 #luk {
-  /* font-size: 1.7em; */
-  font-weight: 500;
-  color: #032f40;
+  position: fixed;
+  padding: 3em 0 0 8.5em;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: white;
   cursor: pointer;
 }
 
 #luk:hover {
-  background-color: #032f40;
-  color: #f2f2f2;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+  color: #032f40;
 }
 @media (max-width: 600px) {
   .nav {
