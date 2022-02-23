@@ -81,9 +81,9 @@ img {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-row: 1fr;
-  gap: 70px;
+  gap: 50px;
   margin-top: 40px;
 }
 article {
@@ -92,19 +92,13 @@ article {
   border-radius: 8px;
   transition-duration: 0.4s;
   place-content: center;
-  width: 180px;
 }
 
-main div {
+.loopviewRamme {
   background-image: url(img/knap_til_loop.png);
   background-position: center;
   background-size: cover;
-  width: 280px;
 }
-
-/* article:hover {
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
-} */
 
 .splash {
   width: 100%;
@@ -144,6 +138,7 @@ main div {
   color: #f2f2f2;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
 } */
+
 button {
   cursor: pointer;
   background-image: url(img/knap_til_link.png);
