@@ -17,6 +17,7 @@ function start() {
   const section = document.querySelector(".infoBoks");
   const template = document.querySelector(".loopview").content;
   const template2 = document.querySelector(".bloggerBoks").content;
+  const loopviewDiv = document.querySelector(".loopviewDiv");
   const popup = document.querySelector("#popup");
   const article = document.querySelector("article");
   const lukKnap = document.querySelector("#luk");
@@ -69,13 +70,12 @@ function start() {
         const klon2 = template2.cloneNode(true);
         klon2.querySelector(".bloggerBillede").src =
           "img/" + blogger.billede2 + ".jpg";
-        klon2.querySelector(".bloggerNavn").textContent = blogger.navn;
         klon2.querySelector(".bloggerTekst").textContent = blogger.omos;
 
         // tilføjer klon-template-elementet til main-elementet (så det hele vises i DOM'en)
         section.appendChild(klon2);
         // tilføjer section-elementet til body før main-elementet
-        document.body.insertBefore(section, main);
+        document.querySelector(".splash").appendChild(section);
       }
     });
   }

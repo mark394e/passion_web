@@ -28,34 +28,41 @@
         <button id="luk">Luk</button>
       </article>
     </section>
-    <div class="splash"><h1>Alle</h1></div>
-
-    <nav class="nav">
-      <button data-influencer="alle" class="valgt">Alle</button>
-      <button data-influencer="Markus">Markus</button>
-      <button data-influencer="Sandra">Sandra</button>
-      <button data-influencer="Filippa">Filippa</button>
-      <button data-influencer="Dino">Dino</button>
-    </nav>
-
-    <section class="infoBoks">
-      <template class="bloggerBoks">
-        <h2 class="bloggerNavn"></h2>
-        <img src="" alt="" class="bloggerBillede" />
-        <p class="bloggerTekst"></p>
-      </template>
-    </section>
+    <div class="splash">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/solar_sounds_logo.png" alt="solar sounds logo" />
+        </a>
+      </div>
+      <nav class="nav">
+        <button data-influencer="alle" class="valgt">Alle</button>
+        <button data-influencer="Markus">Markus</button>
+        <button data-influencer="Sandra">Sandra</button>
+        <button data-influencer="Filippa">Filippa</button>
+        <button data-influencer="Dino">Dino</button>
+      </nav>
+      <h1>Alle</h1>
+      <section class="infoBoks">
+        <template class="bloggerBoks">
+          <img src="" alt="" class="bloggerBillede" />
+          <p class="bloggerTekst"></p>
+        </template>
+      </section>
+    </div>
 
     <main>
       <template class="loopview">
-        <article>
-          <img src="" alt="" class="billede" />
-          <h2 class="navn"></h2>
-          <p class="genre"></p>
-          <p class="korttekst"></p>
-        </article>
+        <div class="loopviewDiv">
+          <article>
+            <img src="" alt="" class="billede" />
+            <h2 class="navn"></h2>
+            <p class="genre"></p>
+            <p class="korttekst"></p>
+          </article>
+        </div>
       </template>
     </main>
+    <footer></footer>
     <script src="script.js"></script>
   </body>
 </html>
