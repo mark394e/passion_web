@@ -23,6 +23,15 @@
   display: grid;
 }
 
+.navn {
+  color: #d87236;
+}
+
+.genre,
+.korttekst {
+  color: #f2f2f2;
+}
+
 h1,
 h2,
 h3 {
@@ -88,6 +97,42 @@ img {
     margin-top: 40px;
   }
 
+  @media (max-width: 600px) {
+    .langtekst {
+      margin-top: -50px;
+    }
+
+    #luk {
+      margin-top: -60px;
+      margin-left: 40px;
+    }
+
+    .udvalgt,
+    .influencer {
+      font-weight: bold;
+    }
+
+    .langtekst,
+    .udvalgt,
+    .influencer {
+      margin-bottom: 10px;
+      color: #f2f2f2;
+    }
+
+    .logo img {
+      margin-top: -20px;
+    }
+
+    .splash h1 {
+      margin-top: -100px;
+    }
+
+    .tekstOmAlle {
+      padding: 10px;
+      margin-top: -30px;
+    }
+  }
+
   #popup {
     display: none;
     position: fixed;
@@ -99,17 +144,19 @@ img {
     overflow: scroll;
   }
 
-  #popup article {
-    width: 70vw;
-    height: 500px;
-    margin: 4rem auto;
-    border-radius: 25px;
-    padding: 12px;
-    background-color: #07678d;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 100px;
-    gap: 20px;
+  @media (min-width: 600px) {
+    #popup article {
+      width: 70vw;
+      height: 500px;
+      margin: 4rem auto;
+      border-radius: 25px;
+      padding: 12px;
+      background-color: #07678d;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 100px;
+      gap: 20px;
+    }
   }
 
   #popup article h2 {
@@ -117,7 +164,7 @@ img {
     grid-column: 2/3;
     grid-row: 1/2;
     place-self: start;
-    color: #f2f2f2;
+    /* color: #f2f2f2; */
   }
 
   #popup article img {
@@ -208,6 +255,10 @@ img {
     width: 190px;
     height: 50px;
   }
+}
+
+article {
+  background-color: #07678d;
 }
 
 @media (min-width: 601px) {

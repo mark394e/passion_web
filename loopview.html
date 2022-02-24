@@ -15,6 +15,8 @@
     />
   </head>
   <body>
+
+    <!-- Singleview i form af popup-vindue -->
     <section id="popup">
       <div id="luk">&#x2715 </div>
       <article>
@@ -34,6 +36,7 @@
         <p class="influencer"></p>
       </article>
     </section>
+    <!-- "Header" med baggrundsbillede og logo -->
     <div class="splash">
       <div class="logo">
         <a href="index.html">
@@ -41,6 +44,7 @@
         </a>
       </div>
       
+      <!-- Burgermenu der kun vises i mobil version -->
       <nav class="burgermenu">
         <div id="menuknap">☰</div>
         <ul id="menu" class="hidden">
@@ -52,6 +56,7 @@
         </ul>
       </nav>
 
+      <!-- Navigationsbar der vises i desktop version -->
       <nav class="nav">
         <button data-influencer="alle" class="valgt">Alle</button>
         <button data-influencer="Markus">Markus</button>
@@ -62,17 +67,21 @@
 
       <h1>Alle</h1>
     
+      <!-- Tekst og billede af musikbloggere der skifter vha. JavaScript -->
       <section class="infoBoks">
         <template class="bloggerBoks">
           <img src="" alt="" class="bloggerBillede" />
           <p class="bloggerTekst"></p>
         </template>
       </section>
+
+      <!-- Tekst til fanen med alle elementer i loopview. Forsvinder vha. JavaScript -->
       <div class="tekstOmAlle">
         <p>Fire af landets mest etablerede musikbloggere fra hovedstaden peger på deres 2022 favoritter. Se deres nøje udvalgte bands og artister, og læs hvorfor netop disse kunstnere kommer til at blinke på stjernehimlen i det nye år. Bliv inspireret af både etablerede og nye acts, som forhåbentligt leverer flere hits i 2022.</p>
       </div>
     </div>
 
+    <!-- Template til loopview der bliver opdateret med data fra restdb vha. JavaScript -->
     <main>
       <div class="loopviewRamme">
       <template class="loopview">
