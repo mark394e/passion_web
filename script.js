@@ -58,7 +58,7 @@ function start() {
     knap.addEventListener("click", filtrerInfluencer)
   );
 
-  // sætter filter til at være ligmed den data-attribut vi har defineret i HTML; forretter, hovedretter eller desserter.
+  // sætter filter til at være ligmed den data-attribut vi har defineret i HTML; Markus, Sandra, Filippa eller Dino
   function filtrerInfluencer() {
     console.log("filtrerInfluencer");
     filter = this.dataset.influencer;
