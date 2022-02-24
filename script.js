@@ -26,14 +26,37 @@ function start() {
   let artister;
   let filter = "alle";
 
+  document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
+  function toggleMenu() {
+    console.log("toggleMenu");
+    document.querySelector("#menu").classList.toggle("hidden");
+
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+    if (erSkjult == true) {
+      document.querySelector("#menuknap").textContent = "☰";
+    } else {
+      document.querySelector("#menuknap").textContent = "X";
+    }
+  }
+
   // sætter eventlistener på alle knapper i nav'en og lytter efter klik på knapperne
   const filterKnapper = document.querySelectorAll(".nav button");
+
+  const filterKnapperBurger = document.querySelectorAll("#menu button");
+
+  filterKnapperBurger.forEach((knap) =>
+    knap.addEventListener("click", filtrerInfluencer)
+  );
+
   filterKnapper.forEach((knap) =>
     knap.addEventListener("click", filtrerInfluencer)
   );
 
   // sætter filter til at være ligmed den data-attribut vi har defineret i HTML; forretter, hovedretter eller desserter.
   function filtrerInfluencer() {
+    console.log("filtrerInfluencer");
     filter = this.dataset.influencer;
 
     // fjerner klassen .valgt og lægger den til den knap der er trykket på
