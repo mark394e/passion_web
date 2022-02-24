@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: noteworthy;
-  src: url(fonts/Noteworthy-Lt.woff);
-}
-
 h1,
 h2,
 h3 {
@@ -19,228 +14,48 @@ p {
   font-family: "Helvetica Neue";
 }
 
-iframe {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-body {
-  background-color: #f2f2f2;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer {
-  background-image: url(img/footer.png);
-  background-size: cover;
-}
-
-.nav {
-  display: grid;
-  grid-column: 2/5;
-  grid-row: 1/3;
-  grid-auto-flow: column;
-  place-content: center;
-  gap: 10px;
-  margin-left: 90px;
-}
-
-.logo {
-  max-width: 55%;
-  margin-left: 40px;
-  grid-column: 1/2;
-  grid-row: 1/3;
-  place-content: center;
-  display: grid;
-  margin-top: 20px;
-}
-
-.infoBoks {
-  grid-column: 2/4;
-  grid-row: 3/5;
-  display: flex;
-  gap: 20px;
-  align-self: center;
-  margin-left: 50px;
-  color: #f2f2f2;
-}
-
 img {
   max-width: 100%;
   border-radius: 8px;
 }
 
-.bloggerBillede {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  align-self: center;
+@font-face {
+  font-family: noteworthy;
+  src: url(fonts/Noteworthy-Lt.woff);
 }
 
-.bloggerTekst {
-  column-width: 310px;
-}
-
-.tekstOmAlle {
-  grid-column: 2/4;
-  grid-row: 3/4;
-  place-self: center start;
-  column-width: 500px;
-  color: #f2f2f2;
-  margin-left: 120px;
-}
-
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-row: 1fr;
-  gap: 50px;
-  margin-top: 40px;
-}
-article {
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-  place-content: center;
-  border: solid 2px #032f40;
-}
-
-article:hover {
-  box-shadow: 5px 5px #d87236;
-}
-
-.splash {
-  width: 100%;
-  height: 70vh;
-  background-image: url(img/undersidebillede.jpg);
-  background-size: cover;
-  background-position: 0 69%;
-  display: grid;
-  grid-template-columns: 300px 1fr 1fr 300px;
-  grid-template-rows: 100px 100px 1fr 1fr;
-  background-color: #032f40;
-}
-.splash h1 {
-  display: grid;
-  color: #f2f2f2;
-  place-content: center;
-  grid-column: 1/2;
-  grid-row: 3/4;
-  font-size: 3rem;
-}
-
-.omos {
-  display: grid;
-}
-
-.omos img {
-  max-width: 40%;
-}
-
-.valgt {
-  color: #d87236;
-}
-
-button {
-  font-family: "noteworthy";
-  cursor: pointer;
-  background-image: url(img/knap_til_link.png);
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-  border: none;
-  font-size: 1.2rem;
-  background-color: #f2f2f2;
-  color: #032f40;
-  font-weight: 500;
-  width: 190px;
-  height: 50px;
-}
-
-button:hover {
-  color: #d87236;
-}
-
-#popup {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow: scroll;
-}
-
-#popup article {
-  width: 70vw;
-  height: 500px;
-  margin: 4rem auto;
-  border-radius: 25px;
-  padding: 12px;
-  background-color: #07678d;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 100px;
-  gap: 20px;
-}
-
-#popup article h2 {
-  margin: 10px 0px 70px 0px;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  place-self: start;
-  color: #f2f2f2;
-}
-
-.langtekst {
-  grid-column: 2/3;
-  grid-row: 1/3;
-  place-self: center;
-  color: #f2f2f2;
-}
-
-.udvalgt {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  place-self: center start;
-  color: #f2f2f2;
-}
-
-.influencer {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  place-self: end start;
-  color: #f2f2f2;
-}
-
-#popup article img {
-  border-radius: 8px;
-  place-self: center;
-  grid-column: 1/2;
-  grid-row: 1/3;
-  max-height: 100%;
-  max-width: 50%;
-}
-
-#luk {
-  position: fixed;
-  padding: 3em 0 0 8.5em;
-  font-size: 1.7em;
-  font-weight: bolder;
-  color: white;
-  cursor: pointer;
-}
-
-#luk:hover {
-  color: #032f40;
-}
 @media (max-width: 600px) {
+  main {
+    max-width: 1200px;
+    margin: auto 20px auto 20px;
+  }
+
+  .logo {
+    max-width: 55%;
+    place-self: center start;
+    margin-top: 36px;
+    margin-left: 15px;
+  }
+
+  article {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    place-content: center;
+    border: solid 2px #032f40;
+  }
+
+  .splash {
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/loopmobil.png);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    background-color: #032f40;
+  }
+
   .nav {
     display: flex;
     justify-content: center;
@@ -249,6 +64,324 @@ button:hover {
     margin: 10px 50px 10px 50px;
   }
   main {
-    margin: 10px 50px 10px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-row: 1fr;
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  #popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+  }
+
+  #popup article {
+    width: 70vw;
+    height: 500px;
+    margin: 4rem auto;
+    border-radius: 25px;
+    padding: 12px;
+    background-color: #07678d;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 100px;
+    gap: 20px;
+  }
+
+  #popup article h2 {
+    margin: 10px 0px 70px 0px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    place-self: start;
+    color: #f2f2f2;
+  }
+
+  #popup article img {
+    border-radius: 8px;
+    place-self: center;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    max-height: 100%;
+    max-width: 50%;
+  }
+
+  #luk {
+    position: fixed;
+    padding: 3em 0 0 8.5em;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+  }
+
+  #luk:hover {
+    color: #032f40;
+  }
+
+  .tekstOmAlle {
+    column-width: 350px;
+    color: #f2f2f2;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    place-self: center;
+  }
+
+  .splash h1 {
+    display: grid;
+    color: #f2f2f2;
+    place-content: start center;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    font-size: 3rem;
+  }
+
+  .infoBoks {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  .bloggerBillede {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1,
+  h2,
+  h3 {
+    font-family: Russo One;
+  }
+
+  p {
+    font-family: "Helvetica Neue";
+  }
+
+  iframe {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  body {
+    background-color: #f2f2f2;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  footer {
+    background-image: url(img/footer.png);
+    background-size: cover;
+  }
+
+  .nav {
+    display: grid;
+    grid-column: 2/5;
+    grid-row: 1/3;
+    grid-auto-flow: column;
+    place-content: center;
+    gap: 10px;
+    margin-left: 90px;
+  }
+
+  .logo {
+    max-width: 55%;
+    margin-left: 40px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    place-content: center;
+    display: grid;
+    margin-top: 20px;
+  }
+
+  .infoBoks {
+    grid-column: 2/4;
+    grid-row: 3/5;
+    display: flex;
+    gap: 20px;
+    align-self: center;
+    margin-left: 50px;
+    color: #f2f2f2;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .bloggerBillede {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .bloggerTekst {
+    column-width: 310px;
+  }
+
+  .tekstOmAlle {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    place-self: center start;
+    column-width: 500px;
+    color: #f2f2f2;
+    margin-left: 120px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-row: 1fr;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  article {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    place-content: center;
+    border: solid 2px #032f40;
+  }
+
+  article:hover {
+    box-shadow: 5px 5px #d87236;
+  }
+
+  .splash {
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/undersidebillede.jpg);
+    background-size: cover;
+    background-position: 0 69%;
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 300px;
+    grid-template-rows: 100px 100px 1fr 1fr;
+    background-color: #032f40;
+  }
+  .splash h1 {
+    display: grid;
+    color: #f2f2f2;
+    place-content: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: 3rem;
+  }
+
+  .omos {
+    display: grid;
+  }
+
+  .omos img {
+    max-width: 40%;
+  }
+
+  .valgt {
+    color: #d87236;
+  }
+
+  button {
+    font-family: "noteworthy";
+    cursor: pointer;
+    background-image: url(img/knap_til_link.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #f2f2f2;
+    color: #032f40;
+    font-weight: 500;
+    width: 190px;
+    height: 50px;
+  }
+
+  button:hover {
+    color: #d87236;
+  }
+
+  #popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+  }
+
+  #popup article {
+    width: 70vw;
+    height: 500px;
+    margin: 4rem auto;
+    border-radius: 25px;
+    padding: 12px;
+    background-color: #07678d;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 100px;
+    gap: 20px;
+  }
+
+  #popup article h2 {
+    margin: 10px 0px 70px 0px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    place-self: start;
+    color: #f2f2f2;
+  }
+
+  .langtekst {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    place-self: center;
+    color: #f2f2f2;
+  }
+
+  .udvalgt {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    place-self: center start;
+    color: #f2f2f2;
+  }
+
+  .influencer {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    place-self: end start;
+    color: #f2f2f2;
+  }
+
+  #popup article img {
+    border-radius: 8px;
+    place-self: center;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    max-height: 100%;
+    max-width: 50%;
+  }
+
+  #luk {
+    position: fixed;
+    padding: 3em 0 0 8.5em;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+  }
+
+  #luk:hover {
+    color: #032f40;
   }
 }
