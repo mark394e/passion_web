@@ -67,6 +67,7 @@ function start() {
     // for hver ret i arrayet, skal der tjekkes om de opfylder filter-kravet (forretter, hovedretter eller desserter) og derefter vises i DOM'en.
     bloggere.forEach((blogger) => {
       if (filter == blogger.influencer) {
+        document.querySelector(".tekstOmAlle p").textContent = "";
         const klon2 = template2.cloneNode(true);
         klon2.querySelector(".bloggerBillede").src =
           "img/" + blogger.billede2 + ".jpg";
@@ -76,6 +77,9 @@ function start() {
         section.appendChild(klon2);
         // tilføjer section-elementet til body før main-elementet
         document.querySelector(".splash").appendChild(section);
+      } else if (filter == "alle") {
+        document.querySelector(".tekstOmAlle p").textContent =
+          "Fire af landets mest etablerede musikbloggere fra hovedstaden peger på deres 2022 favoritter. Se deres nøje udvalgte bands og artister, og læs hvorfor netop disse kunstnere kommer til at blinke på stjernehimlen i det nye år. Bliv inspireret af både etablerede og nye acts, som forhåbentligt leverer flere hits i 2022.";
       }
     });
   }
