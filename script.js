@@ -17,7 +17,6 @@ function start() {
   const section = document.querySelector(".infoBoks");
   const template = document.querySelector(".loopview").content;
   const template2 = document.querySelector(".bloggerBoks").content;
-  const loopviewRamme = document.querySelector(".loopviewRamme").content;
   const popup = document.querySelector("#popup");
   const article = document.querySelector("article");
   const lukKnap = document.querySelector("#luk");

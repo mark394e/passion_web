@@ -95,7 +95,7 @@ img {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-row: 1fr;
   gap: 50px;
   margin-top: 40px;
@@ -106,12 +106,11 @@ article {
   border-radius: 8px;
   transition-duration: 0.4s;
   place-content: center;
+  border: solid 2px #032f40;
 }
 
-.loopviewRamme {
-  background-image: url(img/knap_til_loop.png);
-  background-position: center;
-  background-size: cover;
+article:hover {
+  box-shadow: 5px 5px #d87236;
 }
 
 .splash {
@@ -154,9 +153,8 @@ button {
   background-size: cover;
   border-radius: 8px;
   transition-duration: 0.4s;
-  padding: 10px 24px;
   border: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: #f2f2f2;
   color: #032f40;
   font-weight: 500;
