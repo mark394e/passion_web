@@ -103,8 +103,8 @@ img {
     }
 
     #luk {
-      margin-top: -60px;
-      margin-left: 40px;
+      margin-top: -85px;
+      margin-left: 80px;
     }
 
     .udvalgt,
@@ -123,9 +123,9 @@ img {
       margin-top: -20px;
     }
 
-    .splash h1 {
+    /* .splash h1 {
       margin-top: -100px;
-    }
+    } */
 
     .tekstOmAlle {
       padding: 10px;
@@ -179,7 +179,7 @@ img {
   #luk {
     position: fixed;
     padding: 3em 0 0 8.5em;
-    font-size: 1.7em;
+    font-size: 2em;
     font-weight: bolder;
     color: white;
     cursor: pointer;
